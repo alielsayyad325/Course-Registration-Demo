@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Course Registration | JavaFX + SQLite App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #0b0f14; color: #e8eef6; }
+    .wrap { max-width: 900px; margin: 0 auto; padding: 48px 20px; }
+    .card { background: #121826; border: 1px solid #1f2a3a; border-radius: 14px; padding: 22px; }
+    h1 { margin: 0 0 10px; font-size: 34px; }
+    h2 { margin: 22px 0 10px; font-size: 18px; }
+    p { line-height: 1.6; }
+    .row { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
+    a.btn {
+      display: inline-block; padding: 10px 14px; border-radius: 10px;
+      border: 1px solid #2b3a52; background: #182235; color: #e8eef6;
+      text-decoration: none;
+    }
+    a.btn:hover { background: #1d2b45; }
+    .tag { display: inline-block; padding: 6px 10px; border-radius: 999px; background: #162033; border: 1px solid #24324a; margin: 4px 6px 0 0; font-size: 13px; }
+    ul { margin: 10px 0 0 18px; }
+    li { margin: 6px 0; }
+    img { width: 100%; border-radius: 12px; border: 1px solid #24324a; margin-top: 12px; }
+    .muted { color: #a9b6c8; font-size: 14px; }
+    .divider { height: 1px; background: #1f2a3a; margin: 18px 0; }
+    code { background: #0f1624; padding: 2px 6px; border-radius: 6px; border: 1px solid #24324a; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Course Registration</h1>
+      <p class="muted">
+        JavaFX desktop app for browsing a course catalog and managing course reviews. Supports searching by subject/number/title,
+        viewing average ratings, and CRUD actions on reviews through an FXML-based UI backed by SQLite.
+      </p>
+
+      <div class="row">
+        <a class="btn" href="PASTE_GITHUB_REPO_LINK_HERE" target="_blank" rel="noreferrer">GitHub Repo</a>
+      </div>
+
+      <h2>Highlights</h2>
+      <div>
+        <span class="tag">Java</span>
+        <span class="tag">JavaFX</span>
+        <span class="tag">FXML</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">MVC</span>
+        <span class="tag">DAO</span>
+      </div>
+
+      <ul>
+        <li>Course search and browsing UI built with JavaFX + FXML.</li>
+        <li>Review workflow: submit, edit, delete, and compute average course rating.</li>
+        <li>Persistence layer using SQLite with a database driver and DAO pattern.</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h2>My Contributions (Ali Elsayyad)</h2>
+      <ul>
+        <li>Fixed and refined the course search logic: title uses substring matching while subject and number require exact matches, with case-insensitive handling for consistent results.</li>
+        <li>Resolved review UX and correctness issues by fixing edge cases around editing/submitting reviews and average rating calculation.</li>
+        <li>Implemented validation to prevent duplicate courses, returning an error when a course with the same subject, number, and title already exists.</li>
+        <li>Improved repo hygiene by stopping tracking of the local SQLite database file and adding it to <code>.gitignore</code>.</li>
+        <li>Added code comments and small quality-of-life improvements to improve readability and maintainability.</li>
+      </ul>
+
+      <div class="divider"></div>
+
+      <h2>Screenshots</h2>
+      <p class="muted">
+        Upload screenshots into this same <code>docs/</code> folder and update the filenames below.
+        Good screenshots: login page, course search results, course reviews page, and “my reviews”.
+      </p>
+
+      <!-- Replace these with your real screenshot filenames inside docs/ -->
+      <img src="screenshot1.png" alt="Course Registration screenshot 1" />
+      <img src="screenshot2.png" alt="Course Registration screenshot 2" />
+      <img src="screenshot3.png" alt="Course Registration screenshot 3" />
+      <div class="divider"></div>
+
+      <p class="muted">
+        Notes: This project was completed as part of UVA coursework and focuses on correctness, usability, and data integrity
+        in a desktop application setting.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
